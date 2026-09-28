@@ -1,0 +1,87 @@
+{
+  "model_version": "20260928T113023867477Z",
+  "trained_at_utc": "2026-09-28T11:30:23.867517+00:00",
+  "dataset": "C:\\Users\\Leore\\Downloads\\ml\\house_prices.csv",
+  "rows": 300,
+  "training_rows": 240,
+  "test_rows": 60,
+  "features": [
+    "Area",
+    "Bedrooms",
+    "Bathrooms",
+    "Age",
+    "Location",
+    "Property_Type"
+  ],
+  "algorithms": {
+    "Linear Regression": {
+      "cv_r2_mean": 0.9528885659248976,
+      "cv_r2_std": 0.0076775459876116305,
+      "mae": 2188736.343703808,
+      "rmse": 2907633.2073142864,
+      "r2": 0.940637118511223,
+      "mape": 13.155133492644428
+    },
+    "Random Forest": {
+      "cv_r2_mean": 0.9679206992122849,
+      "cv_r2_std": 0.005576751327958487,
+      "mae": 1600347.6907708028,
+      "rmse": 2158466.068517692,
+      "r2": 0.9672865622673253,
+      "mape": 7.162827860848764
+    },
+    "Gradient Boosting": {
+      "cv_r2_mean": 0.9807525813127647,
+      "cv_r2_std": 0.008199950366021589,
+      "mae": 1613073.4318968994,
+      "rmse": 2353482.2587761735,
+      "r2": 0.9611082405589261,
+      "mape": 7.196690094497324
+    }
+  },
+  "selected_algorithm": "Gradient Boosting",
+  "selected_metrics": {
+    "cv_r2_mean": 0.9807525813127647,
+    "cv_r2_std": 0.008199950366021589,
+    "mae": 1613073.4318968994,
+    "rmse": 2353482.2587761735,
+    "r2": 0.9611082405589261,
+    "mape": 7.196690094497324
+  },
+  "absolute_error_90th_percentile": 3695964.9834749512,
+  "feature_importance": [
+    {
+      "feature": "Area",
+      "importance_mean": 1.3404425188961209,
+      "importance_std": 0.26189928239964516
+    },
+    {
+      "feature": "Location",
+      "importance_mean": 0.7384766572960028,
+      "importance_std": 0.06823236053420034
+    },
+    {
+      "feature": "Bedrooms",
+      "importance_mean": 0.07763815141020024,
+      "importance_std": 0.01408493102673055
+    },
+    {
+      "feature": "Age",
+      "importance_mean": 0.012477198223992025,
+      "importance_std": 0.004639651050650515
+    },
+    {
+      "feature": "Bathrooms",
+      "importance_mean": 0.0007789429869046627,
+      "importance_std": 0.0003312398352185804
+    },
+    {
+      "feature": "Property_Type",
+      "importance_mean": -7.330024737798314e-05,
+      "importance_std": 3.346982263473205e-05
+    }
+  ],
+  "interpretation_method": "Permutation importance on held-out test rows (R2 decrease)",
+  "random_state": 42,
+  "model_file": "house_price_20260928T113023867477Z.joblib"
+}

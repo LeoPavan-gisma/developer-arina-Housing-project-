@@ -1,0 +1,1 @@
+"""House-price project tests."""
